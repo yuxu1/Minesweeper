@@ -48,8 +48,8 @@ public boolean isWon()
 {
   for (int r = 0; r < NUM_ROWS; r++)
     for (int c = 0; c < NUM_COLS; c++)   
-      if ( (bombs.contains(buttons[r][c]) && !buttons[r][c].isMarked()) || (!bombs.contains(buttons[r][c]) && !buttons[r][c].isClicked()) )
-        return false;
+        if(!bombs.contains(buttons[r][c]) && !buttons[r][c].isClicked())
+          return false;
   return true;
 }
 public void displayLosingMessage()
