@@ -236,3 +236,20 @@ public class MSButton
     return numBombs;
   }
 }
+
+public void keyPressed()
+{
+    gameOver=false;
+    win=false;
+    for(int r=0; r<NUM_ROWS;r++)
+      for(int c=0; c<NUM_COLS;c++)
+        {
+          bombs.remove(buttons[r][c]);
+          messageSpace.remove(buttons[r][c]);
+          buttons[r][c].marked=false;
+          buttons[r][c].clicked=false;
+          buttons[r][c].setLabel(" ");
+        }
+    setBombs(); 
+  
+}
