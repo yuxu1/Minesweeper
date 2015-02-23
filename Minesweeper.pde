@@ -69,6 +69,7 @@ public void displayLosingMessage()
           messageSpace.add(buttons[(NUM_ROWS/2)-1][i+5]);
         }
     buttons[(NUM_ROWS/2)-1][i+5].clicked = true;
+    buttons[(NUM_ROWS/2)-1][i+5].marked=false;
     buttons[(NUM_ROWS/2)-1][i+5].setLabel(message.substring(i, i+1));
   }
 }
@@ -82,6 +83,7 @@ public void displayWinningMessage()
   for (int i = 0; i < message.length (); i++ )
   {
     buttons[(NUM_ROWS/2)-1][i+5].clicked = true;
+     buttons[(NUM_ROWS/2)-1][i+5].marked=false;
     if (!messageSpace.contains(buttons[(NUM_ROWS/2)-1][i+5]))
       messageSpace.add(buttons[(NUM_ROWS/2)-1][i+5]);
 
