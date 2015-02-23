@@ -25,7 +25,7 @@ void setup ()
 }
 public void setBombs()
 {
-  while (bombs.size ()<88)
+  while (bombs.size ()<60)
   {
     int row = (int)(Math.random()*NUM_ROWS);
     int col = (int)(Math.random()*NUM_COLS);
